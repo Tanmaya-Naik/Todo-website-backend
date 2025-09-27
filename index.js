@@ -1,4 +1,4 @@
-// start writing from here
+
 const express = require("express");
 // const dotenv = require("dotenv");
 const app = express();
@@ -9,12 +9,6 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const cors = require('cors');
 app.use(cors());
 
-// console.log("ENV FILE PATH =>", require("path").resolve(".env"));
-
-// console.log("Loaded MONGO_URL =>", process.env.MONGO_URL);
-
-// console.log("Loaded PORT =>", process.env.PORT);
-// console.log("Loaded MONGO_URL =>", process.env.MONGO_URL);
 
 
 const port = process.env.PORT || 5000;
@@ -33,4 +27,4 @@ app.use("/api/user", userRoutes);
 app.use("/api/todo", todoRoutes);
 
 // Start server
-app.listen(port, () => console.log(`🚀 Server running at http://localhost:${port}`));
+app.listen(port, () => console.log(`Server running at http://localhost:${port}`));
